@@ -46,6 +46,7 @@ class TwoDaysPriorCommand extends Command
         $message .= "Don't forget to buy painkillers.You are the best!";
 
         \Twilio::message(env('ANGIES_PHONE'), $message);
+        \Twilio::message(env('MY_PHONE'), "Just sent Angie the sms.");
     }
 }
 
